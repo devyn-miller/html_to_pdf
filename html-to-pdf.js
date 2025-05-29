@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 (async () => {
-  const htmlPath = path.resolve(__dirname, '3.html');
+  const htmlPath = path.resolve(__dirname, 'your_html_file_name.html');
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
@@ -26,7 +26,7 @@ const path = require('path');
 
   // Export the entire content as a tall PDF
   await page.pdf({
-    path: '3.pdf',
+    path: 'your_html_file_name.pdf',
     width: '1920px',
     height: `${bodyHeight}px`,
     printBackground: true,
